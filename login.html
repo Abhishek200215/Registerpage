@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register / Login</title>
+    <link rel="stylesheet" href="login.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container" id="formContainer">
+            <div class="form" id="registerForm">
+                <h2>Register</h2>
+                <input type="text" id="regName" placeholder="Full Name" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="regPassword" placeholder="Password" required>
+                    <span class="toggle-password eye-closed" onclick="togglePassword('regPassword', this)">👁️</span>
+                </div>
+                <p id="passwordStrength"></p>
+                <button onclick="registerUser()">Register</button>
+                <p>Already registered? <a href="#" onclick="showLogin()">Login here</a></p>
+            </div>
+
+            <div class="form" id="loginForm">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="toggle-password eye-closed" onclick="togglePassword('loginPassword', this)">👁️</span>
+                </div>
+                <button onclick="loginUser()">Login</button>
+                <p>Not registered yet? <a href="#" onclick="showRegister()">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+ <script type="module" src="login.js"></script>
+</body>
+</html>
